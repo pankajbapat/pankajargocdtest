@@ -1,0 +1,17 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: app-of-apps
+    name: in-cluster
+  project: default
+  source:
+    path: guestbook
+    repoURL: https://github.com/pankajbapat/argocdchildapp1
+    targetRevision: HEAD
