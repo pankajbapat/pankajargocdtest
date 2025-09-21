@@ -1,0 +1,17 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sock-shop
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: app-of-apps
+    name: https://mcsadoaks2-4n27nt07.hcp.germanywestcentral.azmk8s.io:443
+  project: default
+  source:
+    path: scok-shop
+    repoURL: https://github.com/pankajbapat/argocdchildapp1
+    targetRevision: HEAD
