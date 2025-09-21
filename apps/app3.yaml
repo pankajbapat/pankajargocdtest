@@ -9,7 +9,7 @@ metadata:
 spec:
   destination:
     namespace: app-of-apps
-    name: https://mcsadoaks2-4n27nt07.hcp.germanywestcentral.azmk8s.io:443
+    name: aks-azugwc-test-tst-002
   project: default
   source:
     path: scok-shop
