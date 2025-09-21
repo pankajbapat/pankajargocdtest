@@ -12,6 +12,6 @@ spec:
     name: aks-azugwc-test-tst-002
   project: default
   source:
-    path: scok-shop
+    path: sock-shop
     repoURL: https://github.com/pankajbapat/argocdchildapp1
     targetRevision: HEAD
